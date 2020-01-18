@@ -1,0 +1,30 @@
+extends layout/default
+
+include partial/mixinList
+
+block title
+	title Секретный Санта
+block meta
+	meta(property="og:title" content="Тайный Санта")
+	meta(property="og:description" content="Описание")
+	meta(property="og:image" content="img/which-program.png")
+	meta(property="og:url" content="santa.ru")
+	meta(property="og:site_name" content="Тайный Санта")
+	meta(name="twitter:site" content="Тайный Санта")
+	meta(name="twitter:title" content="Тайный Санта")
+	meta(name="twitter:description" content="Описание")
+block content
+	body
+		include partial/header
+		include partial/becomeProgram
+		include partial/reviews
+		include partial/howWhere
+		include partial/canGive
+		include partial/childrenCarousel
+		include partial/footer
+		include partial/form
+					
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
+		+script

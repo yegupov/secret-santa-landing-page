@@ -1,0 +1,32 @@
+form#buycourse(action="" method="post" style="display:none;")
+  h3 Стать <span>Тайным Сантой</span>
+  p Все деньги пойдут на подарки для детей из Филимонковского дома-интерната.
+  input.input.name(
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Введите ваше имя"
+    required
+  )
+  input.input.email(
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Email"
+    required
+  )
+  input.btn(
+    data-fancybox-close
+    type="button"
+    value="Купить курс за 199 руб."
+  )
+  input(
+    type="checkbox"
+    id="consent"
+    name="scales"
+    checked
+  )
+  label.label-consent(for="consent") Я даю согласие на обработку персональных данных и соглашаюсь c
+    a(href='#') пользовательским соглашением
+    | и
+    a(href='#') политикой конфиденциальности

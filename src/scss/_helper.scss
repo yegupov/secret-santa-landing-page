@@ -1,0 +1,178 @@
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  height: 56px;
+  text-align: center;
+  line-height: 52px;
+  padding: 0 25px;
+  background: #ff6362;
+  background-image: linear-gradient(to bottom, #ff6362, #ff5251);
+  border-radius: 28px;
+  border: 0px solid #e54241;
+  border-width: 0px 0px 3px 0px;
+  box-shadow: 0px 3px 17px -3px #B39A94;
+  color: #fff;
+  font-size: 1.12rem;
+  text-decoration: none;
+  @include respondTo(notebook, max) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width:576px) {
+    padding: 0 15px;
+  }
+  &:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom, #ff5251, #ff6362);
+    border: 0px solid #ff6362;
+    border-width: 0px 0px 3px 0px;
+  }
+  &:active, &:visited, &:link {
+    color: #fff;
+  }
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.btn-high {
+  width: 60%;
+  height: 92px;
+  line-height: 88px;
+  text-align: center;
+  border-radius: 46px;
+  padding: 0 13%;
+  margin: 1.7rem 0 2.5rem;
+  @include respondTo(tablet, max) {
+    width: 80%;
+  }
+  @media screen and (max-width:576px) {
+    display: block;
+    width: 70%;
+    margin: 1.7rem auto 2.5rem;
+    padding: 0 18%;
+  }
+  @include respondTo(smartphone, max) {
+    width: 100%;
+  }
+  span {
+    line-height: 1.35;
+  }
+}
+
+.input {
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid #dfdfdf;
+  background-repeat: no-repeat;
+  background-position: 25px 23px;
+  padding-left: 60px;
+  &.name {
+    background-image: url(../img/user.png);
+    background-position: 25px 20px;
+  }
+  &.email {
+    background-image: url(../img/mail.png);
+  }
+}
+
+.money-for {
+  width: 58%;
+  margin-left: 22%;
+  padding: 0;
+  color: #8c8c8c;
+  @include respondTo(netbook, max) {
+    width: 60%;
+  }
+  @include respondTo(tablet, max) {
+    width: 90%;
+    margin-left: 0;
+  }
+  @media screen and (max-width:320px) {
+    font-size: 0.85rem;
+  }
+  &:before, &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+  .box_aside {
+    position: relative;
+    float: left;
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: -35px;
+      left: -60px;
+      width: 27px;
+      height: 75px;
+      background: url(../img/line2.svg) no-repeat;
+      transform: rotate(-40deg);
+      @include respondTo(tablet, max) {
+        display: none;
+      }
+    }
+    img {
+      width: 37px;
+      height: 38px;
+      margin: 5px 15px 0 0;
+    }
+  }
+  .box_cnt {
+    overflow: hidden;
+  }
+}
+
+.price {
+  font-size: 3rem;
+  span {
+    position: relative;
+    font-size: 1.12rem;
+    vertical-align: top;
+    line-height: 2.2;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 14px;
+      left: -4px;
+      width: 50px;
+      height: 1px;
+      background: red;
+      transform: rotate(-15deg);
+      @media screen and (max-width:1440px) {
+        bottom: 12px;
+        left: -5px;
+      }
+      @include respondTo(netbook, max) {
+        bottom: 12px;
+      }
+    }
+  }
+}
+
+.download {
+  margin: 10px 0 20px;
+  @media screen and (max-width:320px) {
+    margin: 10px 20% 20px 0;
+  }
+  img {
+    margin: 0 5px;
+    @include respondTo(netbook, max) {
+      margin: 0 5px 0 7px;
+    }
+  }
+  span {
+    font-size: 0.7rem;
+  }
+}

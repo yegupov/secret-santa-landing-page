@@ -1,0 +1,53 @@
+{
+  "name": "crystalball",
+  "version": "3.0.1",
+  "description": "Web app project scaffolding tool",
+  "repository": "lyutkin/crystalball",
+  "keywords": [
+    "scaffolding",
+    "gulp",
+    "pug",
+    "scss",
+    "babel",
+    "performance"
+  ],
+  "scripts": {
+    "test": "jest",
+    "start": "npm run dev",
+    "zip": "gulp zip",
+    "dev": "cross-env NODE_ENV=development gulp",
+    "prod": "cross-env NODE_ENV=production gulp prod"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "cross-env": "^5.2.0",
+    "faker": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-zip": "^4.2.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "node-sass": "^4.9.4",
+    "run-sequence": "^2.2.1",
+    "webpack": "^4.23.1",
+    "webpack-stream": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "jest": "^23.6.0"
+  }
+}

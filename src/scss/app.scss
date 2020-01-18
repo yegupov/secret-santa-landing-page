@@ -1,0 +1,1216 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+@import 'variable';
+@import 'mixin';
+@import 'placeholder';
+@import 'font';
+@import 'base';
+@import 'helper';
+@import 'module';
+@import 'plugin';
+@import 'animation';
+
+header {
+  height: 100px;
+  padding-top: 25px;
+  @include respondTo(smartphone, max) {
+    display: none;
+  }
+  img {
+    @include respondTo(netbook, max) {
+      width: 280px;
+    }
+    @include respondTo(tablet, max) {
+      width: 205px;
+    }
+    @media screen and (max-width:576px) {
+      width: 160px;
+    }
+  }
+  p {
+    margin: 0;
+    text-align: right;
+    @media screen and (max-width:800px) {
+      text-align: left;
+      padding: 0 11%;
+    }
+    @include respondTo(tablet, max) {
+      padding: 0 20%;
+    }
+    @media screen and (max-width:576px) {
+      padding: 0;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.become-program {
+  width: 100%;
+  overflow-x: hidden;
+  background: url(../img/whitebg1.png) no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 12px 19px -8px rgba(74,74,74,0.1);
+  padding: 2.5rem 0;
+  @include respondTo(smartphone, max) {
+    padding: 1rem 0 1.5rem;
+  }
+  @media screen and (max-width:320px) {
+    padding: 1rem 0 2rem;
+  }
+  .container {
+    .become-santa {
+      padding-bottom: 12rem;
+      background: url(../img/become-santa.png) right -0.5% top no-repeat;
+      background-size: 55% auto;
+      @include respondTo(notebook, max) {
+        padding-bottom: 10rem;
+        background-size: 52% auto;
+      }
+      @media screen and (max-width:1024px) {
+        padding-bottom: 5rem;
+        background: url(../img/become-santa.png) right 1% top no-repeat;
+        background-size: 52% auto;
+      }
+      @include respondTo(netbook, max) {
+        padding-bottom: 2rem;
+        background-size: 50% auto;
+      }
+      @include respondTo(tablet, max) {
+        padding-bottom: 0;
+      }
+      @media screen and (max-width:576px) {
+        background: url(../img/become-santa.png) center top no-repeat;
+        background-size: 74% auto;
+      }
+      @media screen and (max-width:375px) {
+        background-size: 90% auto;
+      }
+      div {
+        h1 {
+          margin-top: 3rem;
+          @include respondTo(tablet, max) {
+            margin-top: 0;
+          }
+          @media screen and (max-width:576px) {
+            margin-top: 460px;
+          }
+          @include respondTo(smartphone, max) {
+            margin-top: 360px;
+          }
+          @media screen and (max-width:375px) {
+            margin-top: 380px;
+          }
+          @media screen and (max-width:320px) {
+            margin-top: 320px;
+          }
+          span:after {
+            content: '';
+            display: block;
+            width: 100%;
+            clear: both;
+          }
+        }
+        p {
+          width: 86%;
+          @media screen and (max-width:950px) {
+            width: 89%;
+          }
+          @media screen and (max-width:920px) {
+            width: 84%;
+          }
+          @include respondTo(tablet, max) {
+            width: 86%;
+          }
+          @media screen and (max-width:576px) {
+            width: 100%;
+          }
+          span {
+            color: $color_primary;
+          }
+        }
+      }
+    }
+    .which-program {
+      background: url(../img/which-program-1.png) left -0.5% top no-repeat;
+      background-size: 55% auto;
+      @include respondTo(notebook, max) {
+        background-size: 50% auto;
+      }
+      @include respondTo(netbook, max) {
+        margin-top: 3rem;
+        background: url(../img/which-program-1.png) left -23% top 35px no-repeat;
+        background-size: 60% auto;
+      }
+      @include respondTo(tablet, max) {
+        background: url(../img/which-program-2.png) left 0 top 35px no-repeat;
+        background-size: 51% auto;
+      }
+      @media screen and (max-width:576px) {
+        background: url(../img/which-program-1.png) center top no-repeat;
+        background-size: 90% auto;
+      }
+      & > div {
+        @include respondTo(notebook, max) {
+          //padding-left: 2%;
+        }
+        h2 {
+          @media screen and (max-width:576px) {
+            margin-top: 430px;
+          }
+          @include respondTo(smartphone, max) {
+            margin-top: 340px;
+          }
+          @media screen and (max-width:320px) {
+            margin-top: 250px;
+          }
+          & + p {
+            margin-bottom: 30px;
+          }
+        }
+        .row {
+          @media screen and (max-width:576px) {
+            padding-left: 4%;
+          }
+          div:last-child {
+            padding-left: 0;
+          }
+          img {
+            margin-top: 7px;
+          }
+          img[src*="grow"] {
+            //margin-top: -2px;
+            @media screen and (max-width:1024px) {
+              margin-top: 0;
+            }
+            @include respondTo(tablet, max) {
+              margin-top: 5px;
+            }
+            @include respondTo(smartphone, max) {
+              margin-top: 5px;
+            }
+          }
+          img[src*="sert"] {
+            margin-top: 0;
+          }
+        }
+        .price {
+          @media screen and (max-width:576px) {
+            text-align: center;
+          }
+        }
+        .btn {
+          padding: 0 50px;
+          @media screen and (max-width:576px) {
+            width: 193px;
+            display: block;
+            margin: 30px auto 0;
+          }
+        }
+        .money-for {
+          width: 72%;
+          margin: 30px 0 0 28%;
+          &::before {
+            left: -60px;
+          }
+          @include respondTo(notebook, max) {
+            width: 60%;
+          }
+          @media screen and (max-width:1024px) {
+            width: 68%;
+          }
+          @include respondTo(netbook, max) {
+            width: 72%;
+          }
+          @include respondTo(tablet, max) {
+            width: 95%;
+            margin: 30px 0 0 0;
+          }
+          @include respondTo(smartphone, max) {
+            width: 78%;
+            margin: 30px auto 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reviews {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  padding: 0 0 4rem;
+  background-color: $color_primary;
+  background-image: url(../img/wave-line.png), url(../img/bg-reviews.png);
+  background-repeat: no-repeat;
+  background-position: top center, bottom 0 left 0;
+  background-size: 100% auto, auto 570px;
+  @media screen and (max-width:1440px) {
+    padding: 0 0 3rem;
+    background-position: top center, bottom 0 left -2%;
+    background-size: 1231px auto, auto 530px;
+  }
+  @media screen and (max-width:1280px) {
+    background-position: top center, bottom 0 left -7%;
+    background-size: 1231px auto, auto 530px;
+  }
+  @include respondTo(notebook, max) {
+    padding: 0 0 3rem;
+    background-position: top center, bottom 0 left -16%;
+    background-size: 1231px auto, auto 500px;
+  }
+  @media screen and (max-width:1024px) {
+    background-position: top center, bottom 0 left -24%;
+    background-size: 1231px auto, auto 460px;
+  }
+  @include respondTo(netbook, max) {
+    background-image: url(../img/wave-line.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 1231px auto;
+  }
+  .row {
+    & > div:first-child {
+      @include respondTo(netbook, max) {
+        display: none;
+      }
+      .hashtag {
+        position: absolute;
+        bottom: 355px;
+        left: 55%;
+        width: 220px;
+        text-align: center;
+        transform: rotate(-8deg);
+        @media screen and (max-width:1440px) {
+          bottom: 350px;
+          left: 55%;
+        }
+        @media screen and (max-width:1280px) {
+          left: 68%;
+        }
+        @include respondTo(notebook, max) {
+          top: 130px;
+          left: 80%;
+        }
+        @media screen and (max-width:1024px) {
+          top: 138px;
+          left: 70%;
+        }
+        p {
+          font-size: 1.5rem;
+          color: $color_primary;
+          font-weight: 700;
+        }
+      }
+    }
+    & > div:last-child {
+      @include respondTo(notebook, max) {
+        padding: 0 3% 0 9%;
+      }
+      @include respondTo(netbook, max) {
+        padding: 0 9%;
+      }
+      @media screen and (max-width:375px) {
+        padding: 0;
+      }
+      h3 {
+        width: 70%;
+        margin: 5rem auto 0;
+        padding-left: 5%;
+        color: #fff;
+        @include respondTo(notebook, max) {
+          width: 90%;
+          padding-left: 10%;
+          margin: 4rem auto 0;
+        }
+        @include respondTo(netbook, max) {
+          padding: 0 15%;
+        }
+        @include respondTo(tablet, max) {
+          padding: 0 10%;
+        }
+        @media screen and (max-width:576px) {
+          padding: 0 5%;
+        }
+        @media screen and (max-width:320px) {
+          text-align: center;
+          font-size: 1.12rem;
+          padding: 0;
+        }
+      }
+      .reviews-slider {
+        margin-top: 20px;
+        .slick-slide {
+          padding: 20px 0;
+          .review {
+            height: 370px;
+            margin: 0 5%;
+            padding: 35px 7% 0;
+            border-radius: 10px;
+            background: #fff url(../img/quotes.png) bottom 0 right 10% no-repeat;
+            box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+            @media screen and (max-width:1440px) {
+              height: 320px;
+            }
+            @media screen and (max-width:1024px) {
+              margin: 0 7%;
+            }
+            @include respondTo(netbook, max) {
+              height: 280px;
+            }
+            @include respondTo(tablet, max) {
+              height: 310px;
+            }
+            @media screen and (max-width:576px) {
+              height: 380px;
+            }
+            @include respondTo(smartphone, max) {
+              height: 460px;
+            }
+            @media screen and (max-width:414px) {
+              height: 520px;
+            }
+            @media screen and (max-width:375px) {
+              height: 490px;
+            }
+            @media screen and (max-width:320px) {
+              height: 530px;
+              box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+            }
+            p {
+              color:$color_default;
+              font-size: 0.9rem;
+              &:first-child {
+                font-size: 1.12rem;
+                font-weight: 700;
+                span {
+                  margin-left: 20px;
+                  @include respondTo(smartphone, max) {
+                    margin-left: 7px;
+                  }
+                  @media screen and (max-width:414px) {
+                    display: block;
+                    margin-left: 0;
+                  }
+                  img {
+                    display: inline-block;
+                    margin: -3px 2px 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.how-where {
+  padding: 6rem 0;
+  background: url(../img/whitebg2.png) no-repeat;
+  @include respondTo(notebook, max) {
+    padding: 4rem 0;
+  }
+  .container {
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      @media screen and (max-width:576px) {
+        margin-bottom: 40px;
+      }
+    }
+    .how {
+      width: 88%;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+      @include respondTo(netbook, max) {
+        width: 100%;
+      }
+      .how-item {
+        width: 30%;
+        @media screen and (max-width:576px) {
+          width: 82% !important;
+          margin: 20px auto 0;
+        }
+        @media screen and (max-width:320px) {
+          width: 100% !important;
+          margin: 20px auto 0;
+        }
+        img {
+          @media screen and (max-width:576px) {
+            display: block;
+            margin: 0 auto !important;
+          }
+        }
+        p {
+          padding: 1.4rem;
+          @include respondTo(netbook, max) {
+            padding: 1.4rem 0 0;
+          }
+          @media screen and (max-width:576px) {
+            padding: 0 !important;
+            margin: 1.4rem 0 !important;
+          }
+        }
+        &:first-child {
+          p {
+            margin-top: 23px;
+          }
+        }
+        &:nth-child(2) {
+          margin-top: 80px;
+          @include respondTo(netbook, max) {
+            margin-top: 20px;
+          }
+          img {
+            margin-left: 15%;
+            @include respondTo(tablet, max) {
+              margin-left: 0;
+            }
+          }
+          p {
+            padding: 1.4rem 0;
+          }
+        }
+        &:last-child {
+          width: 28%;
+        }
+      }
+    }
+    .where {
+      .where-item {
+        width: 49%;
+        &:first-child {
+          @include respondTo(netbook, max) {
+            width: 59%;
+          }
+          @include respondTo(tablet, max) {
+            width: 49%;
+          }
+          @media screen and (max-width:576px) {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          @include respondTo(netbook, max) {
+            width: 40%;
+          }
+          @include respondTo(tablet, max) {
+            width: 49%;
+          }
+          @media screen and (max-width:576px) {
+            width: 100%;
+          }
+          img {
+            @include respondTo(netbook, max) {
+              transform: scale(1.15, 1.15);
+              margin: 55px 0 0 5px;
+            }
+            @include respondTo(tablet, max) {
+              margin: 55px 0 0 -5px;
+            }
+            @media screen and (max-width:576px) {
+              transform: scale(1, 1);
+              margin: 35px 0 0;
+            }
+            @media screen and (max-width:320px) {
+              margin: 0;
+            }
+          }
+        }
+        h2 {
+          text-align: left;
+          width: 70%;
+          margin: 40px 0 35px;
+          @media screen and (max-width:1024px) {
+            width: 80%;
+          }
+          @include respondTo(netbook, max) {
+            margin: 0 0 35px;
+          }
+          @include respondTo(tablet, max) {
+            width: 70%;
+          }
+          @media screen and (max-width:576px) {
+            width: 90%;
+            margin: 0 auto 35px;
+          }
+        }
+        .where-item-row {
+          margin-top: 40px;
+          @media screen and (max-width:576px) {
+            margin-top: 0;
+          }
+          div:first-child {
+            @media screen and (max-width:576px) {
+              text-align: center;
+              margin-bottom: 25px;
+            }
+          }
+          div:last-child p {
+            padding: 35px 0 0 5%;
+            font-size: 1.12rem;
+            @include respondTo(tablet, max) {
+              padding: 0;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.can-give {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 7rem 0;
+  color: #fff;
+  background-color: $color_primary;
+  background-image: url(../img/wave-line.png), url(../img/can-give.png);
+  background-repeat: no-repeat;
+  background-position: top center, bottom 0 right 21%;
+  background-size: 100% auto, auto 85%;
+  @include respondTo(notebook, max) {
+    padding: 5rem 0;
+    background-position: top center, bottom 0 right 12%;
+    background-size: 1231px auto, auto 75%;
+  }
+  @include respondTo(netbook, max) {
+    background-position: top center, bottom 0 right -4%;
+    background-size: 1231px auto, auto 83%;
+  }
+  @include respondTo(tablet, max) {
+    padding: 3rem 0 500px;
+    background-position: top center, bottom 0 left 28%;
+    background-size: 1231px auto, 78% auto;
+  }
+  @media screen and (max-width:576px) {
+    padding: 3rem 0 400px;
+  }
+  @include respondTo(smartphone, max) {
+    padding: 3rem 0 500px;
+    background-position: top center, bottom 0 right 22%;
+    background-size: 1231px auto, 120% auto;
+  }
+  @media screen and (max-width:375px) {
+    padding: 3rem 0 400px;
+  }
+  @media screen and (max-width:320px) {
+    padding: 2.5rem 0 380px;
+  }
+  .container {
+    .d-flex {
+      @include respondTo(tablet, max) {
+        flex-direction: column !important;
+      }
+      .can-give-item {
+        width: 45%;
+        margin: 2.6rem 0 0 0;
+        h2 {
+          @media screen and (max-width:576px) {
+            padding: 0 10%;
+          }
+        }
+        &:first-child {
+          @include respondTo(netbook, max) {
+            width: 55%;
+          }
+          @include respondTo(tablet, max) {
+            width: 90%;
+            margin: 2.6rem auto 0;
+          }
+        }
+        &:last-child {
+          position: relative;
+          width: 50%;
+          margin: 0 0 0 3%;
+          @include respondTo(netbook, max) {
+            width: 45%;
+          }
+          @include respondTo(tablet, max) {
+            width: 90%;
+            margin: 2.6rem auto 0;
+          }
+          div {
+            position: absolute;
+            p {
+              font-size: 0.95rem;
+              color: $color_default;
+              font-weight: 600;
+              line-height: 1.3;
+              span {
+                color: $color_primary;
+                font-weight: 700;
+              }
+            }
+          }
+          .saying-1 {
+            top: 0;
+            left: 18%;
+            width: 186px;
+            height: 123px;
+            padding: 30px 0 0 0;
+            background: url(../img/bg-saying-1.png) no-repeat;
+            transform: rotate(-8deg);
+            @include respondTo(notebook, max) {
+              top: 20px;
+            }
+            @include respondTo(netbook, max) {
+              left: -5%;
+            }
+            @include respondTo(tablet, max) {
+              left: 18%;
+            }
+            @media screen and (max-width:576px) {
+              top: 0;
+              left: 12%;
+            }
+            @include respondTo(smartphone, max) {
+              top: 10px;
+              left: -3%;
+            }
+            @media screen and (max-width:414px) {
+              top: 10px;
+              left: -8%;
+            }
+            @media screen and (max-width:375px) {
+              transform: rotate(-8deg) scale(0.8, 0.8);
+              top: 0;
+              left: -10%;
+            }
+            @media screen and (max-width:320px) {
+              left: -16%;
+            }
+            p {
+              width: 99%;
+              text-align: center;
+              span:before {
+                content: '';
+                display: block;
+                width: 100%;
+                clear: both;
+              }
+            }
+
+          }
+          .saying-2 {
+            top: -70px;
+            left: 55%;
+            width: 250px;
+            height: 178px;
+            line-height: 1;
+            padding: 60px 0 0 25px;
+            background: url(../img/bg-saying-2.png) no-repeat;
+            transform: rotate(11deg);
+            @include respondTo(notebook, max) {
+              top: -35px;
+            }
+            @include respondTo(netbook, max) {
+              left: 44%;
+            }
+            @include respondTo(tablet, max) {
+              top: -50px;
+              left: 50%;
+            }
+            @media screen and (max-width:576px) {
+              top: -70px;
+              left: 54%;
+            }
+            @include respondTo(smartphone, max) {
+              top: -60px;
+              left: 48%;
+            }
+            @media screen and (max-width:414px) {
+              top: -60px;
+              left: 45%;
+            }
+            @media screen and (max-width:375px) {
+              transform: rotate(11deg) scale(0.8, 0.8);
+              top: -80px;
+              left: 40%;
+            }
+            @media screen and (max-width:320px) {
+              left: 34%;
+            }
+            p {
+              width: 75%;
+              text-align: center;
+              span {
+                display: block;
+                font-size: 1.8rem;
+                line-height: 1;
+              }
+            }
+          }
+          .ellipse-text {
+            top: 150px;
+            left: 18%;
+            font-weight: 700;
+            transform: rotate(2deg);
+            @include respondTo(netbook, max) {
+              left: 0;
+            }
+            @include respondTo(tablet, max) {
+              left: 18%;
+            }
+            @media screen and (max-width:576px) {
+              top: 130px;
+              left: 12%;
+            }
+            @include respondTo(smartphone, max) {
+              top: 140px;
+              left: -3%;
+            }
+            @media screen and (max-width:414px) {
+              top: 140px;
+              left: -8%;
+            }
+            @media screen and (max-width:375px) {
+              transform: scale(0.8, 0.8);
+              top: 120px;
+              left: -15%;
+            }
+            @media screen and (max-width:320px) {
+              left: -27%;
+            }
+            svg {
+              width: 410px;
+              height: 57px;
+              text {
+                font-size: 54px;
+                fill: white;
+              }
+            }
+          }
+        }
+        p {
+          font-size: 1.12rem;
+          @include respondTo(tablet, max) {
+            font-size: 1rem;
+          }
+        }
+        h2 + p {
+          font-size: 1.3rem;
+          font-weight: 700;
+          @include respondTo(tablet, max) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.your-help {
+  padding: 90px 0 30px;
+  background: url(../img/whitebg3.png) no-repeat;
+  .container {
+    h2 {
+      text-align: center;
+      padding: 0 20%;
+      @media screen and (max-width:1024px) {
+        padding: 0 15%;
+      }
+      @include respondTo(netbook, max) {
+        padding: 0 12%;
+      }
+      @media screen and (max-width:576px) {
+        padding: 0 5%;
+      }
+    }
+    .children-slider {
+      margin: 0 4.5%;
+      div {
+        .children-slide {
+          padding: 15px 7% 0;
+          .slide-img {
+            position: relative;
+            width: 80%;
+            margin: 0 auto 20px;
+            max-width: 316px;
+            max-height: 316px;
+            &::after {
+              position: absolute;
+              content: '';
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: url(../img/photo-frame.png) no-repeat;
+              background-size: 100%;
+              z-index: 1001;
+            }
+            img {
+              width: 100%;
+            }
+            .sticker {
+              position: absolute;
+              top: -15px;
+              left: calc(50% - 13px);
+              z-index: 1002;
+            }
+            &.child-1 {
+              margin: 10px 0 44px 14%;
+              transform: rotate(7deg);
+              .sticker {
+                transform: rotate(25deg);
+              }
+            }
+            &.child-2 {
+              margin: 25px auto 20px;
+            }
+            &.child-3 {
+              margin: 15px auto 29px;
+              transform: rotate(-12deg);
+              @media screen and (max-width:576px) {
+                margin: 15px 0 29px 8px;
+              }
+              @include respondTo(smartphone, max) {
+                margin: 15px auto 29px;
+              }
+            }
+            &.child-4 {
+              margin: 0 auto 45px;
+              .sticker {
+                transform: rotate(25deg);
+              }
+            }
+          }
+          .slide-desc {
+            position: relative;
+            padding: 0 0 0 35%;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -70px;
+              left: 20%;
+              width: 27px;
+              height: 75px;
+              background: url(../img/line2.svg) no-repeat;
+              z-index: 1010;
+            }
+          }
+          .child-3 + .slide-desc {
+            padding: 0 0 0 40%;
+            &::before {
+              left: 25%;
+            }
+          }
+        }
+      }
+    }
+    .slogan {
+      width: 100%;
+      text-align: center;
+      padding: 6rem 0 2.5rem;
+      background: url(../img/balls.png) left bottom no-repeat;
+      @include respondTo(notebook, max) {
+        background-size: 130px auto;
+      }
+      @include respondTo(tablet, max) {
+        background: none;
+      }
+      h4 {
+        @media screen and (max-width:576px) {
+          padding: 0 5%;
+        }
+      }
+      p {
+        @include respondTo(smartphone, max) {
+          text-align: left;
+        }
+        img {
+          margin: 0 10px 0 30px;
+          @include respondTo(smartphone, max) {
+            vertical-align: top;
+            margin: 0 10px 10px 0;
+          }
+          &:first-child {
+            @include respondTo(smartphone, max) {
+              vertical-align: middle;
+            }
+          }
+        }
+        span {
+          &::after {
+            @include respondTo(smartphone, max) {
+              content: '';
+              display: block;
+              clear: both;
+            }
+          }
+          &:last-child {
+            @include respondTo(smartphone, max) {
+              display: inline-block;
+              width: 80%;
+            }
+          }
+        }
+        &:last-child {
+          font-style: italic;
+          @include respondTo(smartphone, max) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 6rem 0;
+  background: #f4f8fd url(../img/wave-line.png) top center no-repeat;
+  background-size: 100%;
+  @include respondTo(notebook, max) {
+    padding: 5rem 0;
+    background-size: 1231px auto;
+  }
+  .container {
+    .d-flex {
+      .footer-item {
+        width: 50%;
+        @media screen and (max-width:576px) {
+          width: 100%;
+        }
+        .program-img img {
+          @include respondTo(netbook, max) {
+            width: 98%;
+          }
+          @include respondTo(tablet, max) {
+            width: 100%;
+            margin-left: -3%;
+          }
+          @media screen and (max-width:576px) {
+            margin-left: 0;
+          }
+        }
+        .program-desc {
+          padding: 15px 0 0 4%;
+          @include respondTo(netbook, max) {
+            padding: 15px 0 0 0;
+          }
+          p {
+            font-size: 0.8rem;
+            strong {
+              font-size: 1.12rem;
+              @include respondTo(netbook, max) {
+                display: block;
+              }
+            }
+          }
+          .price {
+            font-size: 2.2rem;
+            line-height: 1;
+            @include respondTo(netbook, max) {
+              position: relative;
+            }
+            span {
+              display: block;
+              line-height: 1.5;
+              margin-left: 5px;
+              @media screen and (max-width:1440px) {
+                bottom: 10px;
+              }
+              @include respondTo(netbook, max) {
+                position: absolute;
+                top: 0;
+                left: 147px;
+              }
+              &:after {
+                bottom: 14px;
+                @include respondTo(netbook, max) {
+                  bottom: 13px;
+                }
+              }
+            }
+          }
+        }
+        .download {
+          margin-top: 20px;
+          padding-left: 4%;
+          img {
+            margin: 0 8px;
+          }
+          @include respondTo(netbook, max) {
+            margin-top: 10px;
+            padding-left: 0;
+          }
+        }
+        h4 {
+          font-size: 1.25rem;
+          margin-bottom: 10px;
+          @media screen and (max-width:576px) {
+            margin-top: 30px;
+          }
+          @media screen and (max-width:320px) {
+            font-size: 1.2rem;
+          }
+          span {
+            display: block;
+            font-size: 2.62rem;
+            color: $color_primary;
+            @include respondTo(smartphone, max) {
+              font-size: 2rem;
+            }
+          }
+          & + p {
+            @media screen and (max-width:320px) {
+              font-size: 0.8rem;
+            }
+            span {
+              font-size: 3rem;
+              margin: 0 20px 0 0;
+              vertical-align: middle;
+            }
+          }
+        }
+        .btn-block {
+          .btn {
+            width: 100%;
+            padding: 0 10px;
+            @include respondTo(netbook, max) {
+              margin-top: 3px;
+            }
+            @include respondTo(tablet, max) {
+              margin-bottom: 25px;
+            }
+            @media screen and (max-width:576px) {
+              width: 260px;
+              margin-left: calc(50% - 130px);
+            }
+          }
+          p {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            @include respondTo(netbook, max) {
+              margin-top: 0;
+            }
+          }
+        }
+        .social {
+          width: 90%;
+          margin: 2rem 0 1.5rem;
+          padding: 1.7rem 5%;
+          background-color: #fff;
+          border-radius: 4px;
+          box-shadow: 0px 3px 15px 0 rgba(140,140,140,0.1);
+          @include respondTo(netbook, max) {
+            width: 100%;
+          }
+          @include respondTo(tablet, max) {
+            padding: 1.2rem 0;
+          }
+          @include respondTo(tablet, max) {
+            background: none;
+            margin: 0;
+            padding: 0;
+          }
+          p {
+            @include respondTo(netbook, max) {
+              padding: 0;
+              font-size: 0.85rem;
+            }
+            @include respondTo(tablet, max) {
+              display: none;
+            }
+          }
+          .uscl-list {
+            .uscl-item {
+              &:first-child {
+                padding-left: 0;
+              }
+              .ico_uscl {
+                @include respondTo(netbook, max) {
+                  width: 42px !important;
+                  height: 42px !important;
+                }
+              }
+            }
+          }
+          & + p {
+            padding-left: 8%;
+            @include respondTo(tablet, max) {
+              margin-top: 25px;
+              padding-left: 0;
+            }
+            span {
+              color: $color_primary;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fancybox-content {
+  width: 90%;
+  max-width: 430px;
+  padding: 4rem 4.5%;
+  border-radius: 12px;
+  @include respondTo(desktop, min) {
+    max-width: 500px;
+  }
+  @media screen and (max-width:320px) {
+    width: 98%;
+    padding: 3.5rem 4% 2.5rem;
+  }
+  h3 {
+    @media screen and (max-width:320px) {
+      font-size: 1.45rem;
+    }
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    outline: none;
+    box-shadow: inset 0px 24px 40px -17px rgba(150,150,150,0.1);
+    &[id="consent"] {
+      display: none;
+    }
+  }
+  .btn {
+    padding-top: 0;
+    cursor: pointer;
+  }
+  .label-consent {
+    position: relative;
+    width: 85%;
+    margin: 10px 0 0 10%;
+    font-size: 0.7rem;
+    color: #898888;
+    a {
+      color: #898888;
+      text-decoration: underline;
+      margin: 0 3px;
+    }
+  }
+  input#consent + .label-consent:before {
+    position: absolute;
+    top: 0.21rem;
+    left: -20px;
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: #6aa1f9;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1.2;
+    color: #fff;
+  }
+  input#consent:checked + .label-consent:before {
+    content: "\2714";
+  }
+  .fancybox-close-small {
+    opacity: 0.3;
+    top: 10px;
+    right: 10px;
+    svg {
+      transform: scale(1.6, 1.6);
+    }
+  }
+}
