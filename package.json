@@ -37,7 +37,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-zip": "^4.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "moment": "^2.22.2",
     "node-sass": "^4.9.4",
     "run-sequence": "^2.2.1",
